@@ -1,74 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Adarsh Sathyanarayanan</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Inter', sans-serif;
-      background: #f9f9f9;
-      color: #333;
-      line-height: 1.6;
-      padding: 20px;
-    }
-    header {
-      background: #fff;
-      padding: 40px 20px;
-      text-align: center;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-    header h1 {
-      font-size: 2.5em;
-      margin-bottom: 10px;
-    }
-    header p {
-      font-size: 1.2em;
-      color: #666;
-    }
-    nav {
-      margin: 30px 0;
-      text-align: center;
-    }
-    nav a {
-      margin: 0 15px;
-      text-decoration: none;
-      color: #0077cc;
-      font-weight: 600;
-    }
-    section {
-      max-width: 900px;
-      margin: 40px auto;
-      background: #fff;
-      padding: 30px;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-    }
-    h2 {
-      margin-bottom: 20px;
-      color: #222;
-    }
-    ul {
-      margin: 10px 0 20px 20px;
-    }
-    li {
-      margin-bottom: 10px;
-    }
-    .contact a, .project a {
-      color: #0077cc;
-      text-decoration: none;
-    }
-    .resume-download {
+    body { font-family: 'Inter', sans-serif; background: #fefefe; color: #111; line-height: 1.8; padding: 0; }
+    header { background: #111; color: #fff; padding: 100px 20px 60px; text-align: center; }
+    header h1 { font-size: 3em; margin-bottom: 10px; }
+    header p { font-size: 1.2em; color: #ccc; }
+
+    nav { background: #222; padding: 10px 0; text-align: center; }
+    nav a { margin: 0 20px; color: #ccc; text-decoration: none; font-weight: 600; }
+    nav a:hover { color: #fff; }
+
+    section { max-width: 900px; margin: 60px auto; padding: 0 20px; }
+    h2 { margin-bottom: 20px; font-size: 2em; border-bottom: 2px solid #eee; padding-bottom: 10px; }
+    ul { list-style: none; padding-left: 0; }
+    li { margin-bottom: 15px; }
+    .contact a { color: #0077cc; text-decoration: none; }
+    .btn {
       display: inline-block;
-      margin-top: 10px;
-      padding: 10px 15px;
-      background-color: #0077cc;
-      color: white;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: #0077cc;
+      color: #fff;
       border-radius: 5px;
       text-decoration: none;
-      font-weight: bold;
+    }
+    .btn:hover {
+      background: #005999;
     }
   </style>
 </head>
@@ -82,46 +45,35 @@
     <a href="#about">About</a>
     <a href="#resume">Resume</a>
     <a href="#projects">Projects</a>
-    <a href="#certifications">Certifications</a>
     <a href="#contact">Contact</a>
   </nav>
 
   <section id="about">
     <h2>About Me</h2>
-    <p>Results-driven Data and Analytics Manager with 3.5+ years of experience delivering insights for Fortune 500 clients. Skilled in Power BI, Azure, SQL, and data storytelling. Currently pursuing an MS in Business Analytics with a Supply Chain specialization at UMass Boston (CGPA 4.0).</p>
+    <p>Results-driven Data and Analytics Manager with 3.5+ years of experience delivering impactful insights for Fortune 500 clients. Skilled in Power BI, Azure, SQL, and data storytelling. Currently pursuing a Master’s in Business Analytics with a specialization in Supply Chain at UMass Boston (CGPA 4.0).</p>
   </section>
 
   <section id="resume">
     <h2>Resume</h2>
-    <p><strong>Download my resume:</strong></p>
-    <a class="resume-download" href="Adarsh-ATS-Resume.pdf" download>Download Resume (PDF)</a>
+    <p>Download my latest resume:</p>
+    <a class="btn" href="Adarsh-ATS-Resume.pdf" target="_blank" download>Download Resume</a>
   </section>
 
   <section id="projects">
     <h2>Projects</h2>
-    <ul class="project">
-      <li><strong>Spotify Power BI Dashboard:</strong> <a href="https://www.linkedin.com/posts/adarsh-sathyanarayanan-a182a1186_hi-connections-over-the-past-week-i-decided-activity-7225413082880126976-E5O-?utm_source=share&utm_medium=member_desktop" target="_blank">View Project</a></li>
-      <li><strong>Research Assistant @ UMass Boston</strong> – Leading SQL-naive user study experiment support and participant management.</li>
-      <li><strong>Work-Life Balance Research</strong> – Co-authoring a paper on hybrid work systems and their impact on happiness post-COVID.</li>
-    </ul>
-  </section>
-
-  <section id="certifications">
-    <h2>Certifications</h2>
     <ul>
-      <li>Microsoft Certified: Power BI Data Analyst Associate</li>
-      <li>R Programming – LinkedIn Learning</li>
-      <li>Python – LinkedIn Learning</li>
+      <li><strong>Supply Chain Automation</strong> – Built end-to-end Power BI dashboards for real-time insights.</li>
+      <li><strong>Power BI Spotify Mini Project</strong> – <a href="https://www.linkedin.com/posts/adarsh-sathyanarayanan-a182a1186_hi-connections-over-the-past-week-i-decided-activity-7225413082880126976-E5O-?utm_source=share&utm_medium=member_desktop&rcm=ACoAACvTLnQBwlrv5kCD86d1ddpTFVmVZG-FlgE" target="_blank">View Project</a></li>
+      <li><strong>Research Assistant @ UMass Boston</strong> – Supporting SQL-naive participant experiment and paper on hybrid work systems.</li>
     </ul>
   </section>
 
   <section id="contact">
     <h2>Contact</h2>
-    <p class="contact">
-      Email: <a href="mailto:adarshsathya27@gmail.com">adarshsathya27@gmail.com</a><br />
-      Phone: +1 857-339-9180<br />
-      LinkedIn: <a href="https://www.linkedin.com/in/YOUR_USERNAME">linkedin.com/in/YOUR_USERNAME</a><br />
-      GitHub: <a href="https://github.com/adarshsathya27">github.com/adarshsathya27</a>
+    <p>Email: <a href="mailto:adarshsathya27@gmail.com">adarshsathya27@gmail.com</a><br />
+       Phone: +1 857-339-9180<br />
+       LinkedIn: <a href="https://www.linkedin.com/in/adarshsathya27">linkedin.com/in/adarshsathya27</a><br />
+       GitHub: <a href="https://github.com/adarshsathya27">github.com/adarshsathya27</a>
     </p>
   </section>
 </body>
