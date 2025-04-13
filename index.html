@@ -3,133 +3,154 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Adarsh Sathyanarayanan | Data & Analytics Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Inter', sans-serif;
+  <title>Adarsh Sathyanarayanan | Data & Analytics Manager</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <script>
+    function sendEmail(event) {
+      event.preventDefault();
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const subject = document.getElementById("subject").value;
+      const message = document.getElementById("message").value;
+
+      window.location.href = `mailto:adarshsathya27@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent("Hi Adarsh,%0A%0A" + message + "%0A%0AFrom: " + name + " (" + email + ")")}`;
     }
-    body {
-      background-color: #f8f9fa;
-      color: #212529;
-      line-height: 1.6;
-      padding: 2rem;
-    }
-    header, section {
-      max-width: 960px;
-      margin: auto;
-      padding: 2rem 0;
-    }
-    h1, h2, h3 {
-      color: #343a40;
-    }
-    a.button {
-      display: inline-block;
-      background-color: #007bff;
-      color: #fff;
-      padding: 0.75rem 1.5rem;
-      border-radius: 6px;
-      text-decoration: none;
-      margin-top: 1rem;
-      transition: background 0.3s;
-    }
-    a.button:hover {
-      background-color: #0056b3;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-    }
-    .section-title {
-      font-size: 1.8rem;
-      margin-bottom: 1rem;
-      border-bottom: 2px solid #dee2e6;
-      padding-bottom: 0.5rem;
-    }
-    ul {
-      list-style: disc;
-      margin-left: 1.5rem;
-    }
-    footer {
-      text-align: center;
-      padding: 2rem 0;
-      color: #6c757d;
-    }
-  </style>
+  </script>
 </head>
 <body>
-  <header>
-    <h1>Adarsh Sathyanarayanan</h1>
-    <p>Boston, Massachusetts | <a href="mailto:adarshsathya27@gmail.com">adarshsathya27@gmail.com</a> | +1 857-339-9180</p>
-    <p><strong>Results-driven Data and Analytics Manager</strong> with over 3 years of experience delivering business intelligence solutions, optimizing supply chain & finance operations, and managing high-performance teams. Adept at translating complex data into clear insights through Power BI, SQL, Azure, and more.</p>
-    <a href="Adarsh-Sathyanarayanan-Resume.pdf" download class="button">Download My Resume</a>
-  </header>
+  <main>
+    <section class="intro">
+      <h1>Adarsh Sathyanarayanan</h1>
+      <p>Data & Analytics Manager • Research Assistant • MSBA Student</p>
+      <p class="location">Boston, MA | <a href="mailto:adarshsathya27@gmail.com">adarshsathya27@gmail.com</a></p>
+      <a class="resume-button" href="Adarsh-Sathyanarayanan-Resume.pdf" download>Download Resume</a>
+    </section>
 
-  <section>
-    <h2 class="section-title">Professional Experience</h2>
-    <h3>Manager – Data and Analytics Consultant | Thorogood (India) | Jun 2023 – Jun 2024</h3>
-    <ul>
-      <li>Led 5-member team, mentoring junior consultants, aligning individual goals to firm strategy.</li>
-      <li>Acted as offshore lead for global client project to develop automated Power BI tracking for P&L, inventory, forecast accuracy.</li>
-      <li>Supported quarterly planning, budgeting, and team development efforts.</li>
-    </ul>
-    <h3>Data and Analytics Consultant | Thorogood | Dec 2020 – Jun 2023</h3>
-    <ul>
-      <li>Designed scalable analytics solutions using Power BI, Databricks, Azure Data Factory across supply chain and finance domains.</li>
-      <li>Presented at international marketing events and led multiple successful client proposals.</li>
-      <li>Drove recruitment and conducted interviews across multiple roles and locations.</li>
-      <li>Organized company-wide TownHalls and virtual events, fostering team collaboration.</li>
-    </ul>
-    <h3>Intern | Bosch Rexroth | Jul 2019 – Aug 2019</h3>
-    <ul>
-      <li>Built an internal connectivity app for PLC device data and configurations.</li>
-      <li>Enabled seamless data sharing and system config access for teams.</li>
-    </ul>
-  </section>
+    <section class="about">
+      <h2>About Me</h2>
+      <p>Results-driven Data and Analytics Manager with 3.5+ years of experience in delivering end-to-end analytics solutions for global clients, specializing in supply chain and finance domains. Currently pursuing my MSBA with a focus on Supply Chain Management at the University of Massachusetts Boston (CGPA: 4.0). I'm passionate about helping businesses transform raw data into compelling insights that drive growth, performance, and operational excellence.</p>
+    </section>
 
-  <section>
-    <h2 class="section-title">Current Research & Projects</h2>
-    <ul>
-      <li>📊 <strong>Spotify Analytics Power BI Project</strong>: Built dashboard on top songs of 2023 using Onyx Data. Features KPIs like energy, danceability, genre insights, and comparative stream performance. <a href="https://www.linkedin.com/posts/adarsh-sathyanarayanan-a182a1186_hi-connections-over-the-past-week-i-decided-activity-7225413082880126976-E5O-" target="_blank">[View Project]</a></li>
-      <li>🔍 <strong>Research Assistant at UMass Boston</strong>: Supporting SQL-usability study with 120+ students to assess barriers in writing queries. Responsibilities include participant recruitment, survey design, and live experiment support.</li>
-      <li>📄 Co-authoring research paper: Exploring pre and post-COVID hybrid work and its impact on happiness & work-life balance.</li>
-    </ul>
-  </section>
+    <section class="experience">
+      <h2>Professional Experience</h2>
+      <div>
+        <h3>Thorogood | Manager – Data & Analytics Consultant</h3>
+        <span>Bangalore, India | Jun 2023 – Jun 2024</span>
+        <ul>
+          <li>Led a team of 5 consultants, mentoring them through goal setting, quarterly planning, and professional development.</li>
+          <li>Offshore lead for a Fortune 500 client project, building automated dashboards in Power BI to monitor P&L, inventory health, forecast accuracy, and demand fulfillment.</li>
+          <li>Owned stakeholder alignment through seamless communication and cross-functional coordination.</li>
+          <li>Streamlined processes, resolving project bottlenecks while ensuring quality, timelines, and cost-effectiveness.</li>
+        </ul>
+      </div>
 
-  <section>
-    <h2 class="section-title">Education</h2>
-    <p><strong>University of Massachusetts, Boston</strong><br>MS in Business Analytics, Specializing in Supply Chain (Sep 2024 – Present)<br>CGPA: 4.0</p>
-    <ul>
-      <li>Business Intelligence (MSIS 670)</li>
-      <li>Supply Chain Management (MSIS 617)</li>
-      <li>Operational Risk Management (MSIS 631)</li>
-      <li>Project & Change Management (MSIS 630)</li>
-      <li>Management Decision Models (MBAMS 638)</li>
-      <li>Multivariate and Regression Analysis (MSIS 642)</li>
-    </ul>
-    <p><strong>RV College of Engineering</strong><br>B.E. in Electrical & Electronics (2017 – 2020)</p>
-  </section>
+      <div>
+        <h3>Thorogood | Data & Analytics Consultant</h3>
+        <span>Bangalore, India | Dec 2020 – Jun 2023</span>
+        <ul>
+          <li>Designed scalable Power BI solutions across supply chain and finance for global clients to surface insights.</li>
+          <li>Led marketing events (like "Dashboard in a Day") to showcase capabilities and attract prospects.</li>
+          <li>Headed recruitment initiatives and campus engagement; conducted interviews for analysts and managers.</li>
+          <li>Organized global TownHalls and company dinners with 100+ attendees, managing logistics, vendors, tech & budget.</li>
+        </ul>
+      </div>
 
-  <section>
-    <h2 class="section-title">Certifications</h2>
-    <ul>
-      <li>Microsoft Certified: Power BI Data Analyst Associate</li>
-      <li>LinkedIn Learning: R Programming</li>
-      <li>LinkedIn Learning: Python Essentials</li>
-    </ul>
-  </section>
+      <div>
+        <h3>Bosch Rexroth | PLC Engineering Intern</h3>
+        <span>India | Jul 2019 – Aug 2019</span>
+        <ul>
+          <li>Developed a system for streamlined employee access to PLC device configurations and data logs.</li>
+          <li>Improved data-sharing efficiency across channels and automated retrieval of technical logs.</li>
+        </ul>
+      </div>
+    </section>
 
-  <section>
-    <h2 class="section-title">Skills</h2>
-    <p>Azure Databricks, Azure Data Factory, Extract Transform Load (ETL), DAX, Alteryx, Tableau, SQL, Microsoft Power BI, SQL Server Reporting Services (SSRS), R Language</p>
-  </section>
+    <section class="research">
+      <h2>Research Work</h2>
+      <p>Currently supporting a university study on how work-life balance affects happiness pre- and post-COVID hybrid adoption. Responsibilities include participant recruitment, screening, and session coordination.</p>
+    </section>
 
-  <footer>
-    <p>&copy; 2025 Adarsh Sathyanarayanan </p>
-  </footer>
+    <section class="education">
+      <h2>Education</h2>
+      <p><strong>University of Massachusetts Boston</strong> – MS in Business Analytics (Supply Chain) | <em>CGPA: 4.0</em></p>
+      <ul>
+        <li>MSIS 617: Management of the Supply Chain</li>
+        <li>MSIS 631: Operational Risk Management</li>
+        <li>MSIS 670: Business Intelligence</li>
+        <li>MBAMS 638: Management Decision Models</li>
+        <li>MSIS 630: Project & Change Management</li>
+        <li>MSIS 642: Multivariate and Regression</li>
+      </ul>
+      <p><strong>RV College of Engineering</strong> – B.E. in Electrical & Electronics</p>
+    </section>
+
+    <section class="certifications">
+      <h2>Certifications</h2>
+      <ul>
+        <li>Microsoft Certified: Power BI Data Analyst Associate</li>
+        <li>LinkedIn Learning: Python for Data Science</li>
+        <li>LinkedIn Learning: R Programming Essentials</li>
+      </ul>
+    </section>
+
+    <section class="projects">
+      <h2>Featured Project</h2>
+      <p><a href="https://www.linkedin.com/posts/adarsh-sathyanarayanan-a182a1186_hi-connections-over-the-past-week-i-decided-activity-7225413082880126976-E5O-" target="_blank">Spotify Power BI Dashboard – Top Songs of 2023</a></p>
+      <ul>
+        <li>Extracted data from Onyx Data and created Power BI visualizations for top streamed and featured songs.</li>
+        <li>Showcased KPIs like energy, danceability, release trends, and benchmark comparisons.</li>
+      </ul>
+    </section>
+
+    <section class="competencies">
+      <h2>Core Competencies</h2>
+      <ul class="skills">
+        <li>Team Leadership</li>
+        <li>Stakeholder Management</li>
+        <li>Data Analytics</li>
+        <li>Budget Planning</li>
+        <li>Report Automation</li>
+        <li>Performance Alignment</li>
+        <li>Proposal Development</li>
+        <li>Recruitment Initiatives</li>
+        <li>Event Coordination</li>
+        <li>Information Transfer</li>
+        <li>System Optimization</li>
+        <li>Operational Transparency</li>
+        <li>Data Accessibility</li>
+        <li>Cloud Computing</li>
+        <li>Service Architecture</li>
+        <li>Technical Skills</li>
+        <li>Communication Skills</li>
+        <li>Process Improvement</li>
+        <li>Supply Chain</li>
+        <li>Financial Analysis</li>
+        <li>Project Management</li>
+      </ul>
+      <ul>
+        <li><strong>Leadership and Team Development:</strong> Built high-performing teams by aligning career goals with project demands and client expectations.</li>
+        <li><strong>Project Management:</strong> Ensured timely delivery and quality across multi-phase initiatives for global clients.</li>
+        <li><strong>Analytics and Automation:</strong> Developed scalable Power BI and Alteryx pipelines for real-time insights.</li>
+        <li><strong>Client Engagement:</strong> Trusted partner for stakeholder alignment and business solutioning.</li>
+        <li><strong>Technical Fluency:</strong> Proficient in Azure Databricks, Data Factory, SQL, DAX, R, Tableau, Alteryx.</li>
+      </ul>
+    </section>
+
+    <section class="contact">
+      <h2>Contact Me</h2>
+      <form onsubmit="sendEmail(event)">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Your Email" required>
+        <input type="text" id="subject" placeholder="Subject" required>
+        <textarea id="message" placeholder="Talk to me..." required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+
+    <footer>
+      <p>© Adarsh Sathyanarayanan | Boston, MA | Built with ❤️</p>
+    </footer>
+  </main>
 </body>
 </html>
