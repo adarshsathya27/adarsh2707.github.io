@@ -3,9 +3,104 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Adarsh Sathyanarayanan | Data & Analytics Manager</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <title>Adarsh Sathyanarayanan | Data & Analytics Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to bottom right, #f2f6ff, #dce6ff);
+      color: #1f1f1f;
+      line-height: 1.6;
+    }
+    nav {
+      background-color: #0a192f;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 1.5rem;
+      font-weight: 600;
+    }
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    section {
+      margin-bottom: 3rem;
+    }
+    h1, h2, h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      color: #0a192f;
+    }
+    .hero {
+      text-align: center;
+      padding: 6rem 2rem;
+      background: linear-gradient(135deg, #4f46e5, #06b6d4);
+      color: white;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+    .hero p {
+      font-size: 1.25rem;
+      margin-top: 0;
+    }
+    .resume-button {
+      display: inline-block;
+      background-color: white;
+      color: #4f46e5;
+      padding: 0.75rem 1.5rem;
+      margin-top: 1rem;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    .resume-button:hover {
+      background-color: #e0e7ff;
+    }
+    ul {
+      padding-left: 1.25rem;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    input, textarea, button {
+      padding: 0.75rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+    button {
+      background-color: #4f46e5;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #4338ca;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #0a192f;
+      color: white;
+      margin-top: 4rem;
+    }
+  </style>
   <script>
     function sendEmail(event) {
       event.preventDefault();
@@ -19,20 +114,30 @@
   </script>
 </head>
 <body>
-  <main>
-    <section class="intro">
-      <h1>Adarsh Sathyanarayanan</h1>
-      <p>Data & Analytics Manager • Research Assistant • MSBA Student</p>
-      <p class="location">Boston, MA | <a href="mailto:adarshsathya27@gmail.com">adarshsathya27@gmail.com</a></p>
-      <a class="resume-button" href="Adarsh-Sathyanarayanan-Resume.pdf" download>Download Resume</a>
-    </section>
+  <nav>
+    <div><strong>Adarsh S.</strong></div>
+    <div>
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#research">Research</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
 
-    <section class="about">
+  <header class="hero">
+    <h1>Adarsh Sathyanarayanan</h1>
+    <p>Data & Analytics Manager • Research Assistant • MSBA Student</p>
+    <a class="resume-button" href="Adarsh-Sathyanarayanan-Resume.pdf" download>Download Resume</a>
+  </header>
+
+  <main>
+    <section id="about">
       <h2>About Me</h2>
       <p>Results-driven Data and Analytics Manager with 3.5+ years of experience in delivering end-to-end analytics solutions for global clients, specializing in supply chain and finance domains. Currently pursuing my MSBA with a focus on Supply Chain Management at the University of Massachusetts Boston (CGPA: 4.0). I'm passionate about helping businesses transform raw data into compelling insights that drive growth, performance, and operational excellence.</p>
     </section>
 
-    <section class="experience">
+    <section id="experience">
       <h2>Professional Experience</h2>
       <div>
         <h3>Thorogood | Manager – Data & Analytics Consultant</h3>
@@ -66,12 +171,12 @@
       </div>
     </section>
 
-    <section class="research">
+    <section id="research">
       <h2>Research Work</h2>
       <p>Currently supporting a university study on how work-life balance affects happiness pre- and post-COVID hybrid adoption. Responsibilities include participant recruitment, screening, and session coordination.</p>
     </section>
 
-    <section class="education">
+    <section>
       <h2>Education</h2>
       <p><strong>University of Massachusetts Boston</strong> – MS in Business Analytics (Supply Chain) | <em>CGPA: 4.0</em></p>
       <ul>
@@ -85,7 +190,7 @@
       <p><strong>RV College of Engineering</strong> – B.E. in Electrical & Electronics</p>
     </section>
 
-    <section class="certifications">
+    <section>
       <h2>Certifications</h2>
       <ul>
         <li>Microsoft Certified: Power BI Data Analyst Associate</li>
@@ -94,7 +199,7 @@
       </ul>
     </section>
 
-    <section class="projects">
+    <section id="projects">
       <h2>Featured Project</h2>
       <p><a href="https://www.linkedin.com/posts/adarsh-sathyanarayanan-a182a1186_hi-connections-over-the-past-week-i-decided-activity-7225413082880126976-E5O-" target="_blank">Spotify Power BI Dashboard – Top Songs of 2023</a></p>
       <ul>
@@ -103,41 +208,7 @@
       </ul>
     </section>
 
-    <section class="competencies">
-      <h2>Core Competencies</h2>
-      <ul class="skills">
-        <li>Team Leadership</li>
-        <li>Stakeholder Management</li>
-        <li>Data Analytics</li>
-        <li>Budget Planning</li>
-        <li>Report Automation</li>
-        <li>Performance Alignment</li>
-        <li>Proposal Development</li>
-        <li>Recruitment Initiatives</li>
-        <li>Event Coordination</li>
-        <li>Information Transfer</li>
-        <li>System Optimization</li>
-        <li>Operational Transparency</li>
-        <li>Data Accessibility</li>
-        <li>Cloud Computing</li>
-        <li>Service Architecture</li>
-        <li>Technical Skills</li>
-        <li>Communication Skills</li>
-        <li>Process Improvement</li>
-        <li>Supply Chain</li>
-        <li>Financial Analysis</li>
-        <li>Project Management</li>
-      </ul>
-      <ul>
-        <li><strong>Leadership and Team Development:</strong> Built high-performing teams by aligning career goals with project demands and client expectations.</li>
-        <li><strong>Project Management:</strong> Ensured timely delivery and quality across multi-phase initiatives for global clients.</li>
-        <li><strong>Analytics and Automation:</strong> Developed scalable Power BI and Alteryx pipelines for real-time insights.</li>
-        <li><strong>Client Engagement:</strong> Trusted partner for stakeholder alignment and business solutioning.</li>
-        <li><strong>Technical Fluency:</strong> Proficient in Azure Databricks, Data Factory, SQL, DAX, R, Tableau, Alteryx.</li>
-      </ul>
-    </section>
-
-    <section class="contact">
+    <section id="contact">
       <h2>Contact Me</h2>
       <form onsubmit="sendEmail(event)">
         <input type="text" id="name" placeholder="Your Name" required>
@@ -147,10 +218,10 @@
         <button type="submit">Send</button>
       </form>
     </section>
-
-    <footer>
-      <p>© Adarsh Sathyanarayanan | Boston, MA | Built with ❤️</p>
-    </footer>
   </main>
+
+  <footer>
+    <p>© Adarsh Sathyanarayanan | Boston, MA | Built with ❤️</p>
+  </footer>
 </body>
 </html>
