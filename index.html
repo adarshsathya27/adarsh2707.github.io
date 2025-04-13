@@ -3,225 +3,280 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Adarsh Sathyanarayanan | Data & Analytics Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <title>Adarsh Sathyanarayanan | Data & Analytics Manager</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
-    body {
+    /* Resetting some default styles */
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
       font-family: 'Inter', sans-serif;
-      background: linear-gradient(to bottom right, #f2f6ff, #dce6ff);
-      color: #1f1f1f;
+      background-color: #f4f7fb;
+      color: #333;
       line-height: 1.6;
+      margin: 0;
+      padding: 0;
     }
-    nav {
-      background-color: #0a192f;
-      color: white;
+
+    .container {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-      position: sticky;
-      top: 0;
-      z-index: 100;
+      height: 100vh;
     }
-    nav a {
+
+    /* Sidebar - Left Side */
+    .sidebar {
+      width: 350px; /* Increased width */
+      background-color: #101C36;
       color: white;
+      padding: 40px;
+      position: fixed;
+      height: 100%;
+      border-right: 3px solid #00aaff; /* Added line between index and content */
+    }
+
+    .sidebar h1 {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .sidebar .title {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .sidebar .location, .sidebar .email, .sidebar .resume-button {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .sidebar a {
+      color: #00aaff;
       text-decoration: none;
-      margin-left: 1.5rem;
+    }
+
+    .sidebar .index {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .resume-button {
+      background-color: #00aaff;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: 600;
+      display: inline-block;
+    }
+
+    /* Improved text visibility in button */
+    .resume-button:hover {
+      background-color: #0088cc;
+    }
+
+    .resume-button:focus {
+      outline: none;
+    }
+
+    .resume-button:active {
+      background-color: #006699;
+    }
+
+    .resume-button span {
+      color: white;
+    }
+
+    /* Main Content - Right Side */
+    .content {
+      margin-left: 350px;
+      padding: 40px;
+      width: calc(100% - 350px);
+      background-color: white;
+      overflow-y: scroll;
+      height: 100vh;
+    }
+
+    h2 {
+      font-size: 26px;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    section h3 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-top: 10px;
+      color: #444;
+    }
+
+    ul {
+      list-style-type: none;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+      color: #555;
+    }
+
+    .projects ul li a {
+      color: #00aaff;
+      text-decoration: none;
+    }
+
+    .contact form input,
+    .contact form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      font-size: 16px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    .contact form button {
+      background-color: #00aaff;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
       font-weight: 600;
     }
-    main {
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
-    section {
-      margin-bottom: 3rem;
-    }
-    h1, h2, h3 {
-      font-family: 'Space Grotesk', sans-serif;
-      color: #0a192f;
-    }
-    .hero {
-      text-align: center;
-      padding: 6rem 2rem;
-      background: linear-gradient(135deg, #4f46e5, #06b6d4);
-      color: white;
-    }
-    .hero h1 {
-      font-size: 3rem;
-      margin-bottom: 0.5rem;
-    }
-    .hero p {
-      font-size: 1.25rem;
-      margin-top: 0;
-    }
-    .resume-button {
-      display: inline-block;
-      background-color: white;
-      color: #4f46e5;
-      padding: 0.75rem 1.5rem;
-      margin-top: 1rem;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background 0.3s;
-    }
-    .resume-button:hover {
-      background-color: #e0e7ff;
-    }
-    ul {
-      padding-left: 1.25rem;
-    }
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-    input, textarea, button {
-      padding: 0.75rem;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-      font-size: 1rem;
-    }
-    button {
-      background-color: #4f46e5;
-      color: white;
-      border: none;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #4338ca;
-    }
+
     footer {
       text-align: center;
-      padding: 2rem;
-      background: #0a192f;
-      color: white;
-      margin-top: 4rem;
+      margin-top: 40px;
+      color: #777;
     }
-  </style>
-  <script>
-    function sendEmail(event) {
-      event.preventDefault();
-      const name = document.getElementById("name").value;
-      const email = document.getElementById("email").value;
-      const subject = document.getElementById("subject").value;
-      const message = document.getElementById("message").value;
 
-      window.location.href = `mailto:adarshsathya27@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent("Hi Adarsh,%0A%0A" + message + "%0A%0AFrom: " + name + " (" + email + ")")}`;
+    footer p {
+      font-size: 14px;
     }
-  </script>
+
+  </style>
 </head>
 <body>
-  <nav>
-    <div><strong>Adarsh S.</strong></div>
-    <div>
-      <a href="#about">About</a>
-      <a href="#experience">Experience</a>
-      <a href="#research">Research</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </nav>
+  <div class="container">
+    <!-- Sidebar (Fixed) -->
+    <aside class="sidebar">
+      <h1>Adarsh Sathyanarayanan</h1>
+      <p class="title">Data & Analytics Manager</p>
+      <p class="location"><strong>Boston, Massachusetts</strong></p>
+      <p class="email"><a href="mailto:adarshsathya27@gmail.com">adarshsathya27@gmail.com</a></p>
+      <p><a href="https://www.linkedin.com/in/adarsh-sathyanarayanan-a182a1186" target="_blank">LinkedIn</a></p>
+      <a class="resume-button" href="Adarsh-Sathyanarayanan-Resume.pdf" download><span>Download Resume</span></a>
 
-  <header class="hero">
-    <h1>Adarsh Sathyanarayanan</h1>
-    <p>Data & Analytics Manager • Research Assistant • MSBA Student</p>
-    <a class="resume-button" href="Adarsh-Sathyanarayanan-Resume.pdf" download>Download Resume</a>
-  </header>
-
-  <main>
-    <section id="about">
-      <h2>About Me</h2>
-      <p>Results-driven Data and Analytics Manager with 3.5+ years of experience in delivering end-to-end analytics solutions for global clients, specializing in supply chain and finance domains. Currently pursuing my MSBA with a focus on Supply Chain Management at the University of Massachusetts Boston (CGPA: 4.0). I'm passionate about helping businesses transform raw data into compelling insights that drive growth, performance, and operational excellence.</p>
-    </section>
-
-    <section id="experience">
-      <h2>Professional Experience</h2>
-      <div>
-        <h3>Thorogood | Manager – Data & Analytics Consultant</h3>
-        <span>Bangalore, India | Jun 2023 – Jun 2024</span>
+      <!-- Index Section -->
+      <div class="index">
+        <h3>Index</h3>
         <ul>
-          <li>Led a team of 5 consultants, mentoring them through goal setting, quarterly planning, and professional development.</li>
-          <li>Offshore lead for a Fortune 500 client project, building automated dashboards in Power BI to monitor P&L, inventory health, forecast accuracy, and demand fulfillment.</li>
-          <li>Owned stakeholder alignment through seamless communication and cross-functional coordination.</li>
-          <li>Streamlined processes, resolving project bottlenecks while ensuring quality, timelines, and cost-effectiveness.</li>
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#experience">Professional Experience</a></li>
+          <li><a href="#research">Research Work</a></li>
+          <li><a href="#projects">Featured Projects</a></li>
+          <li><a href="#technical-skills">Technical Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
+    </aside>
 
-      <div>
-        <h3>Thorogood | Data & Analytics Consultant</h3>
-        <span>Bangalore, India | Dec 2020 – Jun 2023</span>
+    <!-- Main Content (Scrollable) -->
+    <main class="content">
+      <!-- About Me Section -->
+		<section id="about" class="about">
+		  <h2>About Me</h2>
+		  <p>
+			I’m a Data & Analytics Manager based in <strong>Boston, Massachusetts</strong>, with over 3.5 years of experience delivering end-to-end analytics solutions in supply chain and finance. I am currently pursuing an MS in Business Analytics at the University of Massachusetts Boston, with a focus on Supply Chain Management. I'm passionate about transforming raw data into actionable insights that drive operational excellence and business growth.
+		  </p>
+		  <p>
+			Additionally, I have a strong foundation in Information Technology and Computer Science, with proficiency in Java, Python, JavaScript, and TypeScript. Whether it’s developing full-stack web applications or building computers from the ground up, I’m always exploring new technologies and honing my skills. I’m a quick learner and love collaborating with others on innovative projects.
+		  </p>
+		</section>
+
+
+      <!-- Professional Experience Section -->
+      <section id="experience" class="experience">
+        <h2>Professional Experience</h2>
+        <div>
+          <h3>Thorogood | Manager – Data & Analytics Consultant</h3>
+          <span>Bangalore, India | Jun 2023 – Jun 2024</span>
+          <ul>
+            <li>Led a team of five junior consultants, aligning individual performance with organizational objectives and maintaining strong stakeholder relationships.</li>
+            <li>Acted as offshore lead for a high-profile global client project, developing automated tracking systems and Power BI reports for key metrics like profit and loss, inventory levels, and forecast accuracy.</li>
+            <li>Played a key role in quarterly planning and budgeting processes, aiding in objective setting and career development planning for junior team members.</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Thorogood | Data & Analytics Consultant</h3>
+          <span>Bangalore Urban, Karnataka, India | Dec 2020 – Jun 2023</span>
+          <ul>
+            <li>Designed and executed scalable, cost-effective analytical solutions tailored to Supply Chain and Finance needs, driving actionable insights that optimized client decision-making.</li>
+            <li>Played a pivotal role in international marketing events, engaging industry professionals and potential clients to generate business growth opportunities.</li>
+            <li>Demonstrated strong leadership in proposal development, crafting client-focused solutions and conducting interviews for diverse roles.</li>
+            <li>Orchestrated both local and global seminars in Bangalore, fostering organizational alignment and collaboration.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Research Work Section -->
+      <section id="research" class="research">
+        <h2>Research Work</h2>
+        <p>Supporting ongoing academic research at the University of Massachusetts Boston on two key projects:</p>
         <ul>
-          <li>Designed scalable Power BI solutions across supply chain and finance for global clients to surface insights.</li>
-          <li>Led marketing events (like "Dashboard in a Day") to showcase capabilities and attract prospects.</li>
-          <li>Headed recruitment initiatives and campus engagement; conducted interviews for analysts and managers.</li>
-          <li>Organized global TownHalls and company dinners with 100+ attendees, managing logistics, vendors, tech & budget.</li>
+          <li><strong>SQL-Naive User Study</strong> | Academic Research Assistant | Apr 2025 – Present: Recruiting and screening over 120 participants, conducting live sessions, and ensuring accurate data collection for a study on SQL-naive users performing SQL queries.</li>
+          <li><strong>Work-Life Balance vs. Happiness: Hybrid Work Models Post-COVID</strong> | Academic Research Paper: Collaborating on a study exploring the impact of hybrid work models on employee happiness, using R Language for statistical modeling and R Markdown for detailed reports. <a href="work_life_balance_happiness.Rmd" download>Download R Markdown File</a></li>
         </ul>
-      </div>
+      </section>
 
-      <div>
-        <h3>Bosch Rexroth | PLC Engineering Intern</h3>
-        <span>India | Jul 2019 – Aug 2019</span>
+      <!-- Featured Projects Section -->
+      <section id="projects" class="projects">
+        <h2>Featured Projects</h2>
         <ul>
-          <li>Developed a system for streamlined employee access to PLC device configurations and data logs.</li>
-          <li>Improved data-sharing efficiency across channels and automated retrieval of technical logs.</li>
+          <li><strong>Spotify Power BI Dashboard – Top Songs of 2023:</strong> Created a comprehensive Power BI dashboard analyzing Spotify's top-performing songs of 2023. The dashboard includes key performance indicators such as energy, danceability, genre, and release date, with comparisons to average metrics.</li>
+          <li><strong>Personal Portfolio Website:</strong> Designed and developed a responsive website to showcase my experience, research, certifications, and projects. Built using HTML, CSS, and JavaScript, the website includes interactive elements such as a contact form and downloadable resume.</li>
         </ul>
-      </div>
-    </section>
+      </section>
 
-    <section id="research">
-      <h2>Research Work</h2>
-      <p>Currently supporting a university study on how work-life balance affects happiness pre- and post-COVID hybrid adoption. Responsibilities include participant recruitment, screening, and session coordination.</p>
-    </section>
+      <!-- Technical Skills Section -->
+      <section id="technical-skills" class="technical-skills">
+        <h2>Technical Skills</h2>
+        <ul>
+          <li><strong>Data Visualization:</strong> Power BI, Tableau</li>
+          <li><strong>Data Analysis:</strong> R, Python, SQL</li>
+          <li><strong>Cloud Platforms:</strong> Azure, AWS</li>
+          <li><strong>Database Management:</strong> SQL Server, MySQL</li>
+          <li><strong>ETL Tools:</strong> Azure Data Factory, Apache Spark</li>
+        </ul>
+      </section>
 
-    <section>
-      <h2>Education</h2>
-      <p><strong>University of Massachusetts Boston</strong> – MS in Business Analytics (Supply Chain) | <em>CGPA: 4.0</em></p>
-      <ul>
-        <li>MSIS 617: Management of the Supply Chain</li>
-        <li>MSIS 631: Operational Risk Management</li>
-        <li>MSIS 670: Business Intelligence</li>
-        <li>MBAMS 638: Management Decision Models</li>
-        <li>MSIS 630: Project & Change Management</li>
-        <li>MSIS 642: Multivariate and Regression</li>
-      </ul>
-      <p><strong>RV College of Engineering</strong> – B.E. in Electrical & Electronics</p>
-    </section>
+      <!-- Contact Form Section -->
+      <section id="contact" class="contact">
+        <h2>Contact</h2>
+        <form action="submit_form.php" method="POST">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea name="message" placeholder="Your Message" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </section>
 
-    <section>
-      <h2>Certifications</h2>
-      <ul>
-        <li>Microsoft Certified: Power BI Data Analyst Associate</li>
-        <li>LinkedIn Learning: Python for Data Science</li>
-        <li>LinkedIn Learning: R Programming Essentials</li>
-      </ul>
-    </section>
-
-    <section id="projects">
-      <h2>Featured Project</h2>
-      <p><a href="https://www.linkedin.com/posts/adarsh-sathyanarayanan-a182a1186_hi-connections-over-the-past-week-i-decided-activity-7225413082880126976-E5O-" target="_blank">Spotify Power BI Dashboard – Top Songs of 2023</a></p>
-      <ul>
-        <li>Extracted data from Onyx Data and created Power BI visualizations for top streamed and featured songs.</li>
-        <li>Showcased KPIs like energy, danceability, release trends, and benchmark comparisons.</li>
-      </ul>
-    </section>
-
-    <section id="contact">
-      <h2>Contact Me</h2>
-      <form onsubmit="sendEmail(event)">
-        <input type="text" id="name" placeholder="Your Name" required>
-        <input type="email" id="email" placeholder="Your Email" required>
-        <input type="text" id="subject" placeholder="Subject" required>
-        <textarea id="message" placeholder="Talk to me..." required></textarea>
-        <button type="submit">Send</button>
-      </form>
-    </section>
-  </main>
-
-  <footer>
-    <p>© Adarsh Sathyanarayanan | Boston, MA | Built with ❤️</p>
-  </footer>
+      <!-- Footer -->
+      <footer>
+        <p>&copy; 2025 Adarsh Sathyanarayanan. All Rights Reserved.</p>
+      </footer>
+    </main>
+  </div>
 </body>
 </html>
